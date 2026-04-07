@@ -14,14 +14,14 @@ public class Main {
         int min = inputArray1[0];
         double avg = inputArray1[0];
 
-        for (int i = 0; i < inputArray1.length; i++) {
-            sum = sum + inputArray1[i];
+        for (int i : inputArray1) {
+            sum += i;
 
-            if (inputArray1[i] > max) {
-                max = inputArray1[i];
+            if (i > max) {
+                max = i;
             }
-            if (inputArray1[i] > min) {
-                min = inputArray1[i];
+            if (i < min) {
+                min = i;
             }
         }
         avg = (double) sum / inputArray1.length;
@@ -31,49 +31,53 @@ public class Main {
         System.out.println("Значения индексов массива в порядке [сумма, максимум, минимум, среднее]");
         System.out.println("Значения индексов массива outputArray1 = " + Arrays.toString(outputArray1));
 
-        System.out.println("Задача 2");
-        int[] inputArray2 = {10, 20, 30, 40, 50}; // массив с 5 целыми числами
-        Object[] outputArray = new Object[5];
-
-        for (int i = 0; i < inputArray2.length; i++) {
-            outputArray[i] = (float) inputArray2[i] * 0.13;
-            //System.out.println("Значения индекса " + i + " для массива inputArray2 = " + Arrays.toString(inputArray2));
-        }
-        System.out.println("Значения индексов массива outputArray = " + Arrays.toString(outputArray));
+            System.out.println("Задача 2");
+            int[] inputArray2 = {10, 20, 30, 40, 50}; // массив с 5 целыми числами
+            double outputArray[] = new double[inputArray2.length];
+            int counetr = 0;
+            for (int i : inputArray2) {
+                outputArray[counetr] = (double) i * 0.13;
+                counetr++;
+                //System.out.println("Значения индекса " + i + " для массива inputArray2 = " + Arrays.toString(inputArray2));
+            }
+            System.out.println("Значения индексов массива outputArray = " + Arrays.toString(outputArray));
 
         System.out.println("Задача 3");
         int[] inputArray3 = {3000, 4000, 5000, 6000, 7000}; // массив с 5 целыми числами
-        boolean[] outputArray3 = new boolean[5];
-
-        for (int i = 0; i < inputArray3.length; i++) {
-            if (inputArray3[i] > 5000) {
-                outputArray3[i] = true;
+        boolean outputArray3[] = new boolean[inputArray3.length];
+        int num = 0;
+        for (int i : inputArray3) {
+            if (inputArray3[num] > 5000) {
+                outputArray3[num] = true;
             }
+            num++;
         }
         System.out.println("Значения индексов массива inputArray3 = " + Arrays.toString(inputArray3));
         System.out.println("Значения индексов массива outputArray3 = " + Arrays.toString(outputArray3));
 
         System.out.println("Задача 4");
-        int[] inputArray4 = {3000, 4000, -5000, 6000, 7000}; // массив с 5 целыми числами
-        boolean[] outputArray4 = new boolean[5];
-
-        for (int i = 0; i < inputArray3.length; i++) {
-            if (inputArray4[i] < 0) {
+        int[] inputArray4 = {-5}; // массив с 1 целыми числами
+        boolean[] outputArray4 = new boolean[inputArray4.length];
+        num = 0;
+        for (int i : inputArray3) {
+            if (inputArray4[num] < 0) {
                 break;
-            } else {outputArray4[i] = true;};
+            } else {outputArray4[num] = true;};
         }
         System.out.println("Значения индексов массива inputArray3 = " + Arrays.toString(inputArray4));
         System.out.println("Значения индексов массива outputArray3 = " + Arrays.toString(outputArray4));
 
         System.out.println("Задача 5");
-        int[] inputArray5 = {3000, 4000, -5000, 6000, 7000}; // массив с 5 целыми числами
-        boolean[] outputArray5 = new boolean[5];
+        int[] inputArray5 = {5000}; // массив с 5 целыми числами
+        boolean[] outputArray5 = new boolean[inputArray5.length];
         int happiMonth = 0;
-        for (int i = 0; i < inputArray5.length; i++) {
-            if (inputArray5[i] > 0){
-                outputArray5[i] = true;
+        num = 0;
+        for (int i : inputArray5) {
+            if (inputArray5[num] > 0){
+                outputArray5[num] = true;
                 happiMonth++;
             }
+            num++;
         }
         System.out.println("Значения индексов массива inputArray5 = " + Arrays.toString(inputArray5));
         System.out.println("Значения индексов массива outputArray5 = " + Arrays.toString(outputArray5));
