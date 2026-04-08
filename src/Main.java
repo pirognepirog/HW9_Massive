@@ -56,20 +56,25 @@ public class Main {
         System.out.println("Значения индексов массива outputArray3 = " + Arrays.toString(outputArray3));
 
         System.out.println("Задача 4");
-        int[] inputArray4 = {-5}; // массив с 1 целыми числами
-        boolean[] outputArray4 = new boolean[inputArray4.length];
+        int[] inputArray4 = {1,2,-3,4,5}; // массив с 1 целыми числами
+        boolean[] outputArray4 = new boolean[1];
         num = 0;
-        for (int i : inputArray3) {
+        for (int i : inputArray4) {
             if (inputArray4[num] < 0) {
+                outputArray4[0] = false;
                 break;
-            } else {outputArray4[num] = true;};
+            }
+            num++;
+            if (num == inputArray4.length) {
+                outputArray4[0] = true;
+            }
         }
         System.out.println("Значения индексов массива inputArray3 = " + Arrays.toString(inputArray4));
-        System.out.println("Значения индексов массива outputArray3 = " + Arrays.toString(outputArray4));
+        System.out.println("Значения индексов массива outputArray3 = " + outputArray4[0]);
 
         System.out.println("Задача 5");
         int[] inputArray5 = {5000}; // массив с 5 целыми числами
-        boolean[] outputArray5 = new boolean[inputArray5.length];
+        boolean[] outputArray5 = new boolean[1];
         int happiMonth = 0;
         num = 0;
         for (int i : inputArray5) {
