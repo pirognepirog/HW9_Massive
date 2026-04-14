@@ -73,19 +73,17 @@ public class Main {
         System.out.println("Значения индексов массива outputArray3 = " + outputArray4[0]);
 
         System.out.println("Задача 5");
-        int[] inputArray5 = {5000}; // массив с 5 целыми числами
-        boolean[] outputArray5 = new boolean[1];
+        int[] inputArray5 = {5000, 2000, 3000,-2000,-1000}; // массив с 5 целыми числами
+        int[] outputArray5 = new int[1];
         int happiMonth = 0;
-        num = 0;
+
         for (int i : inputArray5) {
-            if (inputArray5[num] > 0){
-                outputArray5[num] = true;
+            if (i > 0){
                 happiMonth++;
             }
-            num++;
+            outputArray5[0] = happiMonth;
         }
         System.out.println("Значения индексов массива inputArray5 = " + Arrays.toString(inputArray5));
-        System.out.println("Значения индексов массива outputArray5 = " + Arrays.toString(outputArray5));
-        System.out.println("Количество месяцев с положительной прибылью = " + happiMonth);
+        System.out.println("Количество месяцев с положительной прибылью = " + Arrays.toString(outputArray5));
     }
 }
